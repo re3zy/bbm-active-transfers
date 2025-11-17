@@ -1,0 +1,333 @@
+/* Active Transfers Plugin Styles - Matching mockup design */
+
+* {
+  box-sizing: border-box;
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #111827;
+}
+
+.settings-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  gap: 8px;
+}
+
+/* Transfers Container */
+.transfers-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Panel Header */
+.panel-header-main {
+  background: white;
+  padding: 24px 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.panel-title-main {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.panel-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Transfers List */
+.transfers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Transfer Status Card */
+.transfer-status-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-left: 4px solid #3b82f6;
+}
+
+.transfer-status-card.critical {
+  border-left-color: #dc2626;
+}
+
+/* Transfer Header Row */
+.transfer-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.transfer-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.transfer-id {
+  font-size: 12px;
+  color: #6b7280;
+  font-family: monospace;
+  margin-bottom: 4px;
+}
+
+.transfer-product {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0 8px 0;
+  color: #111827;
+}
+
+/* Status Badge */
+.transfer-status-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-warehouse-review {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-initiated {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-confirmed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-pending {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.status-shipped {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Status Timeline */
+.status-timeline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+  position: relative;
+}
+
+.status-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.status-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.status-dot.completed {
+  background: #10b981;
+  color: white;
+}
+
+.status-dot.active {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.status-dot.pending {
+  background: #e5e7eb;
+  color: #9ca3af;
+}
+
+.status-line {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background: #e5e7eb;
+  z-index: 1;
+}
+
+.status-line.completed {
+  background: #10b981;
+}
+
+.status-label {
+  font-size: 11px;
+  text-align: center;
+  color: #6b7280;
+  font-weight: 500;
+  max-width: 100px;
+  line-height: 1.3;
+}
+
+.status-label.active {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.status-label.completed {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Transfer Details Grid */
+.transfer-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+@media (max-width: 768px) {
+  .transfer-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-section {
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.detail-label {
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.detail-subvalue {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* Quantity Comparison */
+.quantity-comparison {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+@media (max-width: 640px) {
+  .quantity-comparison {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.qty-item {
+  flex: 1;
+  text-align: center;
+}
+
+.qty-label {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.qty-value {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 4px 0;
+}
+
+.qty-requested {
+  color: #3b82f6;
+}
+
+.qty-confirmed {
+  color: #10b981;
+}
+
+.qty-system {
+  color: #6b7280;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.empty-state-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.empty-state-text {
+  font-size: 14px;
+  color: #6b7280;
+}
